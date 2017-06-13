@@ -2,9 +2,11 @@
 
 <head>
     <link rel="stylesheet" href="https://rawgit.com/grzesiekmq/media_upload/master/web/static/css/dropzone.min.css" />
+    <title>Media upload</title>
 </head>
 
 <body>
+    <h1>Media upload</h1>
     <form action="{{ url_for('upload_file')}}" class="upload-zone dropzone">
         <div class="fallback">
             <input name="uploaded_media" type="file" multiple />

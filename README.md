@@ -1,1 +1,8 @@
-# media_upload
+ENV VARIABLES
+-------------
+
+APP_ENV
+MANDRILL_KEY
+BUCKET_NAME
+QUEUE_NAME
+QUEUE_REGION

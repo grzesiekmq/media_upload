@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/dropzone.min.css') }}"
+        />
+    </head>
+    <body>
+
+        <form action="{{ url_for('upload_file')}}" class="upload-zone dropzone">
+          <div class="fallback">
+            <input name="uploaded_media" type="file" multiple />
+          </div>
+        </form>
+        <form
+            action="{{ url_for('process_order')}}"
+            class="order-ctrl"
+            onsubmit="event.preventDefault(); handleOrderForm(this);"
+        >
+            <input class="order-crtl--client-email" name="email" type="email" placeholder="Your email..."/>
+            <button type="submit" class="order-ctrl--confirm">
+                Confirm Order
+            </button>
+            <button type="button" class="order-ctrl--reset">
+                Clear Order
+            </button>
+        </form>
+    </body>
+    <script src="{{ url_for('static', filename='js/vendor/dropzone.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/axios.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/order_storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/handle_order.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>
